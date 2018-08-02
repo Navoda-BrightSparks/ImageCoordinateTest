@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M1P-gz-6Lu">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="NYc-vi-l5j">
+            <objects>
+                <viewController id="M1P-gz-6Lu" customClass="ViewController" customModule="ImageCoordinateTest" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SYT-ga-t3h">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gameimage" translatesAutoresizingMaskIntoConstraints="NO" id="yQN-7b-DUd">
+                                <rect key="frame" x="184" y="67" width="300" height="241"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="241" id="cbJ-lF-Pk2"/>
+                                    <constraint firstAttribute="width" constant="300" id="fnT-qb-enz"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cEq-CS-Yly" appends="YES" id="rFI-cr-XOL"/>
+                                </connections>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmo-90-HrZ">
+                                <rect key="frame" x="0.0" y="187" width="667" height="1"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.1647058824" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="667" id="OVX-bm-e8i"/>
+                                    <constraint firstAttribute="height" constant="1" id="dHj-iK-pah"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjA-Ln-ngx">
+                                <rect key="frame" x="327.5" y="0.0" width="1" height="375"/>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.2156862745" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="bJL-KI-V16"/>
+                                    <constraint firstAttribute="height" constant="375" id="xYo-5i-9sG"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOw-Wn-LCE">
+                                <rect key="frame" x="538" y="305" width="109" height="50"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.1647058824" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ONi-0m-ZPE"/>
+                                    <constraint firstAttribute="width" constant="109" id="Vom-KG-fRv"/>
+                                </constraints>
+                                <state key="normal" title="Points">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getIntersection:" destination="M1P-gz-6Lu" eventType="touchUpInside" id="CiB-V6-HpL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.65098039220000004" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="fjA-Ln-ngx" firstAttribute="centerY" secondItem="SYT-ga-t3h" secondAttribute="centerY" id="0Zl-tO-Poi"/>
+                            <constraint firstItem="ar7-vP-eHy" firstAttribute="bottom" secondItem="XOw-Wn-LCE" secondAttribute="bottom" constant="20" id="B2z-oD-b8V"/>
+                            <constraint firstItem="dmo-90-HrZ" firstAttribute="centerY" secondItem="SYT-ga-t3h" secondAttribute="centerY" id="Bh1-YX-ukc"/>
+                            <constraint firstItem="fjA-Ln-ngx" firstAttribute="centerX" secondItem="SYT-ga-t3h" secondAttribute="centerX" constant="-5.5" id="Bh9-Mz-mGt"/>
+                            <constraint firstItem="dmo-90-HrZ" firstAttribute="centerX" secondItem="SYT-ga-t3h" secondAttribute="centerX" id="F8K-1W-bmE"/>
+                            <constraint firstItem="dmo-90-HrZ" firstAttribute="centerX" secondItem="yQN-7b-DUd" secondAttribute="centerX" id="LUI-3v-7hV"/>
+                            <constraint firstItem="yQN-7b-DUd" firstAttribute="centerX" secondItem="SYT-ga-t3h" secondAttribute="centerX" id="Ma6-Xq-kJA"/>
+                            <constraint firstItem="yQN-7b-DUd" firstAttribute="centerY" secondItem="SYT-ga-t3h" secondAttribute="centerY" id="S2F-1z-TgI"/>
+                            <constraint firstItem="ar7-vP-eHy" firstAttribute="trailing" secondItem="XOw-Wn-LCE" secondAttribute="trailing" constant="20" id="itu-96-8JW"/>
+                            <constraint firstItem="dmo-90-HrZ" firstAttribute="leading" secondItem="SYT-ga-t3h" secondAttribute="leading" id="vAN-Es-oqn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ar7-vP-eHy"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Hcs-fW-2q6" appends="YES" id="vaR-cB-Lo5"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="gameImage" destination="yQN-7b-DUd" id="M1C-cR-h6H"/>
+                        <outlet property="gameImageHeight" destination="cbJ-lF-Pk2" id="LY4-MW-dvd"/>
+                        <outlet property="gameImageWidth" destination="fnT-qb-enz" id="aOd-dD-4k0"/>
+                        <outlet property="horizontalLine" destination="dmo-90-HrZ" id="9XU-Jy-Dt9"/>
+                        <outlet property="horizontalLinewidth" destination="OVX-bm-e8i" id="Y3L-ml-vBK"/>
+                        <outlet property="verticalLine" destination="fjA-Ln-ngx" id="ZUz-wL-YwL"/>
+                        <outlet property="verticalLineHeight" destination="xYo-5i-9sG" id="DV5-f3-eP1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfg-hC-Tte" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="Hcs-fW-2q6">
+                    <connections>
+                        <action selector="ScaleImage:" destination="M1P-gz-6Lu" id="91M-sA-SKj"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="cEq-CS-Yly">
+                    <connections>
+                        <action selector="handlePanWithRecognizer:" destination="M1P-gz-6Lu" id="sOw-Zh-WGM"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-147.07646176911544" y="-231.19999999999999"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Gameimage" width="2746" height="1800"/>
+    </resources>
+</document>
